@@ -1,0 +1,87 @@
+@import "@fortawesome/fontawesome-free/css/all.css";
+:root {
+  --primary-input-color: #2484fc;
+  --primary-input-background: #fff;
+  --secondary-input-background: #0747a6;
+  --primary-background: #bdc3c7;
+  --secondary-background: #e2e4e9;
+  --text-table-color: #172b4d;
+}
+.ag-theme-alpine {
+  --ag-alpine-active-color: var(--primary-input-color);
+  --ag-header-column-resize-handle-height: 50%;
+  --ag-header-background-color: var(--secondary-background);
+  --ag-control-panel-background-color: var(--secondary-background);
+  --ag-foreground-color: var(--text-table-color);
+  --ag-data-color: var(--text-table-color);
+}
+// sửa lại stye checkbox
+.ag-theme-alpine {
+  .ag-popup {
+    height: 0 !important;
+    min-height: 0 !important;
+  }
+  min-height: 700px;
+  .ag-checked {
+    --ag-checkbox-checked-color: var(--primary-input-background);
+    --ag-checkbox-background-color: var(--primary-input-color);
+  }
+  .ag-filter-toolpanel-header,
+  .ag-filter-toolpanel-search,
+  .ag-status-bar,
+  .ag-header-row,
+  .ag-panel-title-bar-title,
+  .ag-multi-filter-group-title-bar {
+    color: var(--text-table-color);
+  }
+}
+
+.ag-checkbox-input-wrapper.ag-checked::after {
+  content: "\f14a";
+  font-family: "Font Awesome 6 Free";
+  font-size: 18px;
+  color: var(--primary-input-color);
+}
+.ag-checkbox-input-wrapper.ag-checked {
+  background-color: var(--primary-input-background);
+}
+
+//  header cell
+.ag-header-cell-resize::after {
+  background-color: transparent;
+}
+.ag-header-cell-resize:hover::after {
+  background-color: var(--primary-background);
+}
+
+// toggle button
+.ag-toggle-button-input-wrapper:focus-within {
+  box-shadow: none;
+}
+.ag-wrapper.ag-input-wrapper.ag-toggle-button-input-wrapper {
+  --ag-toggle-button-off-background-color: var(--secondary-input-background);
+}
+.ag-toggle-button-input-wrapper {
+  border-color: var(--primary-input-color);
+  width: 34px;
+}
+.ag-toggle-button-input-wrapper::before {
+  border-color: var(--primary-input-color);
+}
+.ag-wrapper.ag-input-wrapper.ag-toggle-button-input-wrapper.ag-checked {
+  --ag-toggle-button-on-background-color: var(--primary-background);
+}
+.ag-toggle-button-input-wrapper.ag-checked {
+  border-color: var(--primary-background);
+}
+.ag-toggle-button-input-wrapper.ag-checked::before {
+  border-color: var(--primary-background);
+}
+
+// display none
+.ag-unselectable.ag-column-drop.ag-column-drop-vertical.ag-focus-managed.ag-column-drop-empty {
+  display: none;
+}
+.ag-root-wrapper {
+  border: none;
+}

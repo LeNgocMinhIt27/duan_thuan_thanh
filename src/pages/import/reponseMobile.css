@@ -1,0 +1,16 @@
+.center_cols {
+  display: flex;
+  align-items: center;
+}
+
+.center_cols__item {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.3rem;
+}
+
+.center_cols .h-full {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

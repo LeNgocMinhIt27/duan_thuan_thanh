@@ -1,0 +1,61 @@
+$alignments: ('center', 'space-between', 'space-around', 'space-evenly', 'flex-start', 'flex-end');
+
+@each $align in $alignments {
+  .justify-#{$align} {
+    justify-content: #{$align};
+  }
+
+  .align-#{$align} {
+    align-items: #{$align};
+  }
+
+  .justify-items-#{$align} {
+    justify-items: #{$align};
+  }
+
+  .align-self-#{$align} {
+    align-content: #{$align};
+  }
+}
+$properties: ('grow', 'shrink');
+@each $property in $properties {
+  .flex-#{$property}-1 {
+    flex-#{$property}: 1;
+  }
+  .flex-#{$property}-0 {
+    flex-#{$property}: 0;
+  }
+}
+$directions: (row, column);
+@each $direction in $directions {
+  .flex-#{$direction} {
+    flex-direction: $direction;
+  }
+}
+$displayProps: (
+  'block',
+  'inline-block',
+  'inline',
+  'flex',
+  'grid',
+  'inline-flex',
+  'inline-grid',
+  'table',
+  'inline-table',
+  'list-item',
+  'none',
+  'contents'
+);
+
+@each $disp in $displayProps {
+  .d-#{$disp} {
+    display: #{$disp};
+  }
+}
+$textAlignments: ('left', 'right', 'center', 'revert');
+
+@each $textAlign in $textAlignments {
+  .text-#{$textAlign} {
+    text-align: #{$textAlign};
+  }
+}
